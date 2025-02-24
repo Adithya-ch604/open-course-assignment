@@ -1,0 +1,68 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+  transition: background 0.5s, color 0.5s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container.light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.app-container.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.animated-heading {
+  font-size: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-button {
+  background: #008cba;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.theme-button:hover {
+  background: #005f75;
+}
+
+/* Fix for Safari (Adds WebKit Support for Glassmorphism Effect) */
+.info-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px); /* Safari Fix */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.info-box h2 {
+  margin: 10px 0;
+}
